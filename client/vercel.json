@@ -1,3 +1,8 @@
 {
-  "rootDirectory": "client"
+  "projects": {
+    "client": {
+      "framework": "nextjs",
+      "rootDirectory": "client"
+    }
+  }
 }
