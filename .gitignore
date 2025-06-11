@@ -1,2 +1,3 @@
 server/.env
 server/xooper.json
+client/node_modules
