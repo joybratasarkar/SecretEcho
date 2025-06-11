@@ -1,8 +1,0 @@
-{
-  "projects": {
-    "client": {
-      "framework": "nextjs",
-      "rootDirectory": "client"
-    }
-  }
-}
