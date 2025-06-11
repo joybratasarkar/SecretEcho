@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/joy/Desktop/SecretEcho/client/src/app/layout.tsx"],"sourcesContent":["import \"./globals.css\";\nimport { ReactNode } from \"react\";\n\nexport const metadata = {\n  title: \"SecretEcho\",\n  description: \"AI Companion Chat App\",\n};\n\nexport default function RootLayout({ children }: { children: ReactNode }) {\n  return (\n    <html lang=\"en\">\n      <body className=\"bg-gray-50 text-gray-900 min-h-screen\">\n        <main className=\"max-w-xl mx-auto p-4\">{children}</main>\n      </body>\n    </html>\n  );\n}\n"],"names":[],"mappings":";;;;;;;AAGO,MAAM,WAAW;IACtB,OAAO;IACP,aAAa;AACf;AAEe,SAAS,WAAW,EAAE,QAAQ,EAA2B;IACtE,qBACE,8OAAC;QAAK,MAAK;kBACT,cAAA,8OAAC;YAAK,WAAU;sBACd,cAAA,8OAAC;gBAAK,WAAU;0BAAwB;;;;;;;;;;;;;;;;AAIhD","debugId":null}},
+    {"offset": {"line": 47, "column": 0}, "map": {"version":3,"sources":["file:///home/joy/Desktop/SecretEcho/client/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,4HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0],"debugId":null}}]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/joy/Desktop/SecretEcho/client/src/app/page.tsx"],"sourcesContent":["\"use client\";\nimport { useEffect } from \"react\";\nimport { useRouter } from \"next/navigation\";\n\nexport default function HomePage() {\n  const router = useRouter();\n\n  useEffect(() => {\n    const token = localStorage.getItem(\"token\");\n    router.push(token ? \"/chat\" : \"/login\");\n  }, []);\n\n  return null;\n}\n"],"names":[],"mappings":";;;AACA;AACA;;AAFA;;;AAIe,SAAS;;IACtB,MAAM,SAAS,CAAA,GAAA,qIAAA,CAAA,YAAS,AAAD;IAEvB,CAAA,GAAA,6JAAA,CAAA,YAAS,AAAD;8BAAE;YACR,MAAM,QAAQ,aAAa,OAAO,CAAC;YACnC,OAAO,IAAI,CAAC,QAAQ,UAAU;QAChC;6BAAG,EAAE;IAEL,OAAO;AACT;GATwB;;QACP,qIAAA,CAAA,YAAS;;;KADF","debugId":null}},
+    {"offset": {"line": 43, "column": 0}, "map": {"version":3,"sources":["file:///home/joy/Desktop/SecretEcho/client/node_modules/next/navigation.js"],"sourcesContent":["module.exports = require('./dist/client/components/navigation')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0],"debugId":null}}]
+}

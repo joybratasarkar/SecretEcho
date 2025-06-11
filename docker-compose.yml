@@ -1,0 +1,50 @@
+services:
+  mongo:
+    image: mongo
+    container_name: secretecho-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: secretecho-rabbitmq
+    ports:
+      - "5673:5672"       # Changed to avoid port conflict
+      - "15673:15672"     # Management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  server:
+    build: ./server
+    container_name: secretecho-server
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+      - rabbitmq
+    env_file:
+      - ./server/.env
+    volumes:
+      - ./server:/app
+    restart: unless-stopped
+
+  client:
+    build: ./client
+    container_name: secretecho-client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5000
+    # ⛔ Consider removing for production
+    # volumes:
+    #   - ./client:/app
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
+
