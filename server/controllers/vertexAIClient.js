@@ -1,13 +1,11 @@
 require('dotenv').config();
-const path = require('path');
-// process.env.GOOGLE_APPLICATION_CREDENTIALS = path.resolve(process.env.GOOGLE_APPLICATION_CREDENTIALS);
-
 const { VertexAI } = require('@google-cloud/vertexai');
 
 const vertexAi = new VertexAI({
   project: process.env.GOOGLE_PROJECT_ID,
   location: 'us-central1',
 });
+
 console.log('project:', process.env.GOOGLE_PROJECT_ID);
 
 async function getAIResponse(prompt) {
