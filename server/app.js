@@ -44,12 +44,11 @@ mongoose
 // Create Socket.io server with proper CORS and transports config
 const io = new Server(server, {
   cors: {
-    origin: "*",
-    credentials: true
+    origin:"https://secretecho-drzv.onrender.com", 
+    methods: ["GET", "POST"],
+    credentials: true,
   },
-  transports: ["websocket", "polling"], // Required to avoid xhr poll errors
 });
-
 // Attach socket handler
 socketHandler(io);
 

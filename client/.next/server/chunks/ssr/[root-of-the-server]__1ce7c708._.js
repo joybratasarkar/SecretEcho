@@ -13,13 +13,14 @@ module.exports = mod;
 
 var { g: global, __dirname } = __turbopack_context__;
 {
+// const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 __turbopack_context__.s({
     "fetchMessages": (()=>fetchMessages),
     "login": (()=>login),
     "register": (()=>register),
     "sendMessage": (()=>sendMessage)
 });
-const BASE_URL = "http://localhost:5000"; // or use process.env.NEXT_PUBLIC_API_URL
+const BASE_URL = "https://secretecho-drzv.onrender.com";
 const login = async (username, password)=>{
     const res = await fetch(`${BASE_URL}/api/auth/login`, {
         method: "POST",
@@ -66,10 +67,8 @@ const fetchMessages = async (token, userId)=>{
             Authorization: `Bearer ${token}`
         }
     });
-    if (!res.ok) {
-        throw new Error("Failed to fetch messages");
-    }
-    return res.json(); // returns array of conversation documents with populated messages
+    if (!res.ok) throw new Error("Failed to fetch messages");
+    return res.json();
 };
 }}),
 "[externals]/next/dist/server/app-render/action-async-storage.external.js [external] (next/dist/server/app-render/action-async-storage.external.js, cjs)": (function(__turbopack_context__) {
