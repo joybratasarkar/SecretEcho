@@ -39,7 +39,7 @@ The frontend is built using **React with Next.js App Router** and styled with **
 The backend is built using **Node.js**, **Express**, and **MongoDB**, following modular patterns for scalability and production readiness.
 
 **Authentication:**
-- JWT-based login and signup endpoints.
+- JWT-based login and signup endpoints. 
 - Middleware-secured routes and socket connections.
 
 **Messaging:**
@@ -53,7 +53,7 @@ The backend is built using **Node.js**, **Express**, and **MongoDB**, following 
 - Implements both short-term and long-term memory layers to store and reference user interactions intelligently.
 
 **Production Readiness:**
-- Scalable architecture with middleware, modular routes, services, and job processing.
+- Scalable architecture with middleware, modular routes, services.
 
 ---
 
