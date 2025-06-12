@@ -4,7 +4,8 @@ import { useEffect, useState, useRef } from "react";
 import { io, Socket } from "socket.io-client";
 import { fetchMessages } from "@/services/api"; // Your API to fetch past messages
 
-const BASE_URL = "http://localhost:5000"; // Defined at the top
+// const BASE_URL = "http://localhost:5000"; // Defined at the top
+const BASE_URL = "https://secretecho-drzv.onrender.com"
 
 function LoadingDots() {
   return <span className="animate-pulse text-sm text-gray-500">Typing...</span>;
