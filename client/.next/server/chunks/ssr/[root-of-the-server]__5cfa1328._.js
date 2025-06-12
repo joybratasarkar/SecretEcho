@@ -285,8 +285,6 @@ function ChatBox() {
                         lineNumber: 113,
                         columnNumber: 11
                     }, this) : messages.map((msg)=>{
-                        // Determine if the message is from the current user
-                        // Assuming user_id is stored as string matching sender._id or sender.username
                         const isUser = msg.sender?._id === user_id || msg.sender?.username === user_id;
                         const isAI = msg.isAIResponse;
                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -302,17 +300,17 @@ function ChatBox() {
                                     children: msg.content
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ChatBox.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 131,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ChatBox.tsx",
-                                lineNumber: 126,
+                                lineNumber: 124,
                                 columnNumber: 17
                             }, this)
-                        }, msg._id, false, {
+                        }, msg._id || `${msg.content}-${msg.createdAt}`, false, {
                             fileName: "[project]/src/components/ChatBox.tsx",
-                            lineNumber: 122,
+                            lineNumber: 120,
                             columnNumber: 15
                         }, this);
                     }),
@@ -320,19 +318,19 @@ function ChatBox() {
                         className: "max-w-[60%] px-4 py-2 bg-gray-200 rounded-xl rounded-bl-none shadow-sm text-gray-600 select-none",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(LoadingDots, {}, void 0, false, {
                             fileName: "[project]/src/components/ChatBox.tsx",
-                            lineNumber: 141,
+                            lineNumber: 140,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ChatBox.tsx",
-                        lineNumber: 140,
+                        lineNumber: 139,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         ref: messagesEndRef
                     }, void 0, false, {
                         fileName: "[project]/src/components/ChatBox.tsx",
-                        lineNumber: 144,
+                        lineNumber: 143,
                         columnNumber: 9
                     }, this)
                 ]
@@ -358,7 +356,7 @@ function ChatBox() {
                         spellCheck: false
                     }, void 0, false, {
                         fileName: "[project]/src/components/ChatBox.tsx",
-                        lineNumber: 155,
+                        lineNumber: 154,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -370,13 +368,13 @@ function ChatBox() {
                         children: "Send"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ChatBox.tsx",
-                        lineNumber: 164,
+                        lineNumber: 163,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ChatBox.tsx",
-                lineNumber: 148,
+                lineNumber: 147,
                 columnNumber: 7
             }, this)
         ]

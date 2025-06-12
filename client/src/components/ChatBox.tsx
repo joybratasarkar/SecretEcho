@@ -113,14 +113,12 @@ export default function ChatBox() {
           <div className="text-center text-gray-400 mt-10">No messages yet</div>
         ) : (
           messages.map((msg) => {
-            // Determine if the message is from the current user
-            // Assuming user_id is stored as string matching sender._id or sender.username
             const isUser = msg.sender?._id === user_id || msg.sender?.username === user_id;
             const isAI = msg.isAIResponse;
 
             return (
               <div
-                key={msg._id}
+                key={msg._id || `${msg.content}-${msg.createdAt}`}
                 className={`flex ${isUser ? "justify-end" : "justify-start"}`}
               >
                 <div
@@ -135,6 +133,7 @@ export default function ChatBox() {
               </div>
             );
           })
+
         )}
         {aiTyping && (
           <div className="max-w-[60%] px-4 py-2 bg-gray-200 rounded-xl rounded-bl-none shadow-sm text-gray-600 select-none">

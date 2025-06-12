@@ -8,6 +8,7 @@ const vertexAi = new VertexAI({
   project: process.env.GOOGLE_PROJECT_ID,
   location: 'us-central1',
 });
+console.log('project:', process.env.GOOGLE_PROJECT_ID);
 
 async function getAIResponse(prompt) {
   try {
