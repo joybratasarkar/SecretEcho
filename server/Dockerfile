@@ -4,10 +4,15 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy only server files
-COPY server/package*.json ./
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install production dependencies
 RUN npm install --omit=dev
-COPY server .
+
+# Copy rest of the server files
+COPY . .
 
 EXPOSE 5000
+
 CMD ["node", "app.js"]
