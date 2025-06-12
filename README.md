@@ -172,9 +172,8 @@ secretecho/
 
     Vertex AI credentials are loaded via environment variables.
 
-    RabbitMQ is required for async job processing .
 
-    The backend can be scaled horizontally since real-time communication and jobs are decoupled.
+    The backend can be scaled horizontally .
 
     Frontend uses Tailwind and App Router for lightweight styling and routing.
 
