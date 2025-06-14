@@ -66,7 +66,6 @@ The backend is built using **Node.js**, **Express**, and **MongoDB**, following 
 | Realtime     | Socket.IO                                  |
 | Auth         | JWT (JSON Web Token)                       |
 | AI Agent     | Vertex AI                                  |
-| Queue System | RabbitMQ (Work Queues)                     |
 
 ---
 
